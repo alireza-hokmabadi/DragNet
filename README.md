@@ -17,10 +17,24 @@ DOI: https://doi.org/10.1016/j.media.2022.102678
 ![alt text](https://github.com/alireza-hokmabadi/DragNet/blob/master/data/model_structure.jpg)
 
 ### Installation
-These modules can be installed with pip:
-```python
-pip install -r requirements.txt
+To use this project, follow these steps:
+
+1. Clone the Repository: Clone this repository to your local machine using the following command:
+
+```bash
+git clone https://github.com/alireza-hokmabadi/DragNet.git
 ```
+
+2. Navigate to the Project Directory: Change your working directory to the project folder:
+
+```bash
+cd DragNet
+```
+
+
+
+
+
 
 ## Usage
 You can run the code using the following command on your local machine:
@@ -44,7 +58,7 @@ If you are interested in our paper or used our codes, please cite it as:
 ```
 
 ## contact
-- For any comment, please contact Alireza Hokmabadi
+For any comment, please contact Alireza Hokmabadi
 - Email: [a.hokmabadi.ee@gmail.com](mailto:a.hokmabadi.ee@gmail.com)
 
 
