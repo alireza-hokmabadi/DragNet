@@ -11,7 +11,7 @@ Pytorch implementation of DragNet (Deformable Registration and Generative Networ
 
 This repository is a torch implementation of DragNet based on "DragNet: Learning-based deformable registration for realistic cardiac MR sequence generation from a single frame".
 
-The paper is publicly available at https://doi.org/10.1016/j.media.2022.102678 or you can download it from [here](https://github.com/alireza-hokmabadi/DragNet/blob/master/data/DragNet_paper.pdf)
+The paper is publicly available at https://doi.org/10.1016/j.media.2022.102678 or you can download it [here](https://github.com/alireza-hokmabadi/DragNet/blob/master/data/DragNet_paper.pdf)
 
 **Model structure:**
 <div align="center" style="margin-bottom: 40px;">
@@ -20,7 +20,7 @@ The paper is publicly available at https://doi.org/10.1016/j.media.2022.102678 o
 
 </div>
 
-**Generation results:**
+**Sample generated results:**
 
 <div align="center">
   <table align="center" style="margin-bottom: 40px;">
