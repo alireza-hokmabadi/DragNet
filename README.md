@@ -26,7 +26,7 @@ The paper is open access at https://doi.org/10.1016/j.media.2022.102678 or you c
 **Generated sample:**
 
 <div align="center" style="margin-bottom: 40px;">
-  <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_0.gif" alt="Image 3" width="30%">
+  <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_0.gif" alt="Image 3" width="25%">
 </div>
 
 
