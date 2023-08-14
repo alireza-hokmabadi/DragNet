@@ -41,6 +41,15 @@ pip install -r requirements.txt
 You can run the code related to train phase using the following command on your local machine:
 ```bash
 python phase_a_train.py [-h] [--data_path] [--frame_size] [--sigma_blur] [--epoch_size] [--batch_size] [--learning_rate]
+
+optional arguments:
+  -h, --help        show this help message and exit
+  --data_path       Data path
+  --frame_size      Frame size (default: 7)
+  --sigma_blur      Sigma blur (Standard deviation for Gaussian kernel, default: 0.2)
+  --epoch_size      Epoch size (default: 70)
+  --batch_size      Batch size (default: 10)
+  --learning_rate   Learning rate (default: 0.001)
 ```
 
 ## Citation
