@@ -22,17 +22,17 @@ This paper is publicly available at https://doi.org/10.1016/j.media.2022.102678 
   <table align="center">
     <tr>
       <td align="center">
-        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Original_sequence.gif" alt="Image 2" width="300px">
+        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Original_sequence.gif" alt="Image 2" width="200px">
         <br>
         <em>Original sequence</em>
       </td>
       <td align="center">
-        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_0.gif" alt="Image 3" width="300px">
+        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_0.gif" alt="Image 3" width="200px">
         <br>
         <em>Generated sequence #0</em>
       </td>
       <td align="center">
-        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_1.gif" alt="Image 4" width="300px">
+        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_1.gif" alt="Image 4" width="200px">
         <br>
         <em>Generated sequence #1</em>
       </td>
