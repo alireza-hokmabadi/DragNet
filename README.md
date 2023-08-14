@@ -12,14 +12,14 @@ Pytorch implementation of DragNet (Deformable Registration and Generative Networ
 This repository is a torch implementation of DragNet based on "DragNet: Learning-based deformable registration for realistic cardiac MR sequence generation from a single frame"
 This paper is publicly available at https://doi.org/10.1016/j.media.2022.102678 or you can download it from [here](https://github.com/alireza-hokmabadi/DragNet/blob/master/data/DragNet_paper.pdf)
 
-<div align="center" style="margin-bottom: 20px;">
+<div align="center" style="margin-bottom: 40px;">
   <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/model_structure.jpg" alt="Image 1">
   <br>
   <em>Model structure.</em>
 </div>
 
 <div align="center">
-  <table align="center">
+  <table align="center" style="margin-bottom: 40px;">
     <tr>
       <td align="center">
         <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Original_sequence.gif" alt="Image 2" width="200px">
@@ -39,41 +39,6 @@ This paper is publicly available at https://doi.org/10.1016/j.media.2022.102678 
     </tr>
   </table>
 </div>
-
-
-
-<div align="center">
-  <table align="center">
-    <tr>
-      <td align="center">
-        <img src="image2_url" alt="Image 2" width="100%">
-        <br>
-        <em>Centered Caption for Image 2</em>
-      </td>
-      <td align="center">
-        <img src="image3_url" alt="Image 3" width="100%">
-        <br>
-        <em>Centered Caption for Image 3</em>
-      </td>
-      <td align="center">
-        <img src="image4_url" alt="Image 4" width="100%">
-        <br>
-        <em>Centered Caption for Image 4</em>
-      </td>
-    </tr>
-  </table>
-</div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Installation
