@@ -4,7 +4,7 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Citation](#Citation)
+- [Citation](#citation)
 
 ## Description
 Pytorch implementation of DragNet (Deformable Registration and Generative Network).
