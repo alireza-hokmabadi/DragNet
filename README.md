@@ -18,22 +18,26 @@ This paper is publicly available at https://doi.org/10.1016/j.media.2022.102678 
   <em>Model structure.</em>
 </div>
 
-<div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
-  <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Original_sequence.gif" alt="Original_sequence" width="30%">
-  <div style="text-align:center; margin-bottom: 20px;">
-    <em>Original sequence</em>
-  </div>
-
-  <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_0.gif" alt="Generated_sequence_0" width="30%">
-  <div style="text-align:center; margin-bottom: 20px;">
-    <em>Generated sequence #0</em>
-  </div>
-
-  <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_1.gif" alt="Generated_sequence_1" width="30%">
-  <div style="text-align:center; margin-bottom: 20px;">
-    <em>Generated sequence #1</em>
-  </div>
-
+<div align="center">
+  <table align="center">
+    <tr>
+      <td align="center">
+        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Original_sequence.gif" alt="Image 2" width="100%">
+        <br>
+        <em>Original sequence</em>
+      </td>
+      <td align="center">
+        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_0.gif" alt="Image 3" width="100%">
+        <br>
+        <em>Generated sequence #0</em>
+      </td>
+      <td align="center">
+        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_1.gif" alt="Image 4" width="100%">
+        <br>
+        <em>Generated sequence #1</em>
+      </td>
+    </tr>
+  </table>
 </div>
 
 
