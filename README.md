@@ -22,19 +22,43 @@ This paper is publicly available at https://doi.org/10.1016/j.media.2022.102678 
   <table align="center">
     <tr>
       <td align="center">
-        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Original_sequence.gif" alt="Image 2" width="100%">
+        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Original_sequence.gif" alt="Image 2" width="300px">
         <br>
         <em>Original sequence</em>
       </td>
       <td align="center">
-        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_0.gif" alt="Image 3" width="100%">
+        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_0.gif" alt="Image 3" width="300px">
         <br>
         <em>Generated sequence #0</em>
       </td>
       <td align="center">
-        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_1.gif" alt="Image 4" width="100%">
+        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_1.gif" alt="Image 4" width="300px">
         <br>
         <em>Generated sequence #1</em>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+
+<div align="center">
+  <table align="center">
+    <tr>
+      <td align="center">
+        <img src="image2_url" alt="Image 2" width="100%">
+        <br>
+        <em>Centered Caption for Image 2</em>
+      </td>
+      <td align="center">
+        <img src="image3_url" alt="Image 3" width="100%">
+        <br>
+        <em>Centered Caption for Image 3</em>
+      </td>
+      <td align="center">
+        <img src="image4_url" alt="Image 4" width="100%">
+        <br>
+        <em>Centered Caption for Image 4</em>
       </td>
     </tr>
   </table>
