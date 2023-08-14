@@ -31,15 +31,16 @@ git clone https://github.com/alireza-hokmabadi/DragNet.git
 cd DragNet
 ```
 
+3. Install Dependencies: Install the project's dependencies listed in the requirements.txt file:
 
-
-
-
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
-You can run the code using the following command on your local machine:
-```cmd
-python displacment_colorwheel.py
+You can run the code related to train phase using the following command on your local machine:
+```bash
+python phase_a_train.py [-h] [--data_path] [--frame_size] [--sigma_blur] [--epoch_size] [--batch_size] [--learning_rate]
 ```
 
 ## Citation
