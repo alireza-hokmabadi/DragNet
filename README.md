@@ -18,16 +18,19 @@ The paper is open access at https://doi.org/10.1016/j.media.2022.102678 or you c
   <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/model_structure.jpg" alt="Image 1" width="80%">
 </div>
 
-**Spatio-temporal registration:**
 
-Spatio-temporal registration between consecutive frames in an LAX CMR image sequence consisting of seven frames. The registered image at the first time point is obtained
-by warping the image at time point 7 to the ED frame. The registered images show overall good compatibility with the reference images. The corresponding colour-coded deformation vector field (DVF)
-maps showing the direction of displacements are smooth and mostly have positive Jacobian determinants. The reference CMR images were reproduced with a permission of UK
-Biobank©.
+**Spatio-temporal registration:**
 
 <div align="center" style="margin-bottom: 40px;">
   <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/spatio_temporal_registration.jpg" alt="Image 2" width="80%">
+  <br>
+  <em>Spatio-temporal registration between consecutive frames in an LAX CMR image sequence consisting of seven frames. The registered image at the first time point is obtained
+  by warping the image at time point 7 to the ED frame. The registered images show overall good compatibility with the reference images. The corresponding colour-coded deformation vector field (DVF)
+  maps showing the direction of displacements are smooth and mostly have positive Jacobian determinants. The reference CMR images were reproduced with a permission of UK
+  Biobank©.
+  </em>
 </div>
+
 
 **Generated sample:**
 
