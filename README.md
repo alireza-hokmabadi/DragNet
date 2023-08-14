@@ -21,7 +21,7 @@ The paper is open access at https://doi.org/10.1016/j.media.2022.102678 or you c
 
 **Spatio-temporal registration:**
 
-<div style="margin-bottom: 40px; text-align: center;">
+<div align="center" style="margin-bottom: 40px;">
   <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/spatio_temporal_registration.jpg" alt="Image 2" width="80%">
 </div>
 
