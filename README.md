@@ -38,7 +38,35 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-You can run the code related to train phase using the following command on your local machine:
+
+### Training Phase (phase_a_train.py)
+
+To train the model, follow these steps:
+
+1. **Run Training Code:** Open a terminal window and navigate to the project directory. Run the training code using the following command:
+
+```bash
+python phase_a_train.py [--data_path] [--frame_size] [--sigma_blur] [--epoch_size] [--batch_size] [--learning_rate]
+```
+
+Optional arguments:
+
+- `--data_path`: Data path
+- `--frame_size`: Frame size (default: 7)
+- `--sigma_blur`: Sigma blur (Standard deviation for Gaussian kernel, default: 0.2)
+- `--epoch_size`: Epoch size (default: 70)
+- `--batch_size`: Batch size (default: 10)
+- `--learning_rate`: Learning rate (default: 0.001)
+
+Example:
+
+```bash
+python phase_a_train.py --data_path /path/to/your/data
+```
+
+
+
+- phase_a_train.py: You can run the code related to train phase using the following command on your local machine:
 ```bash
 python phase_a_train.py [-h] [--data_path] [--frame_size] [--sigma_blur] [--epoch_size] [--batch_size] [--learning_rate]
 
@@ -51,6 +79,16 @@ optional arguments:
   --batch_size      Batch size (default: 10)
   --learning_rate   Learning rate (default: 0.001)
 ```
+In this code, we have used 4-chamber LAX cine CMR images of UK-Biobank as input. First, we crop them in the size of 128*128 and also reduce the number of frames from 50 to the defined frame size (here 7 for default). total number of available samples with ground truth was 4620 and we used 80% of them for training and 20% for validation. Moreover to increase the run speed of the program, first we packed that data with a size of 460*7*1*128*128 and loaded it in the RAM.
+However due to copy right rule, we cannot share the data and if you run this code, it raises the error of the data path. So, if you are going to use this code first prepare your data like this format and modify the data path or change the dataset and parameters of the model based on your needs.
+
+- phase_b_test.py & phase_c_generation.py: You can run the code related to test and generation phase using the following command on your local machine:
+```bash
+python phase_b_test.py
+python phase_c_generation.py
+```
+for this test and generation codes, we uploaded a sample sequence with the size of 1*7*1*128*128 and used it to show how the network works. you can modify the code by inserting your own data and parameters.
+
 
 ## Citation
 
