@@ -16,6 +16,23 @@ This paper is publicly available at https://doi.org/10.1016/j.media.2022.102678 
 ![alt text](https://github.com/alireza-hokmabadi/DragNet/blob/master/data/model_structure.jpg)
 *Caption: Model structure.*
 
+
+<div align="center">
+  <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/model_structure.jpg" alt="Image 1">
+  <br>
+  <em>Model structure.</em>
+</div>
+
+<div align="center">
+  <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Original_sequence.gif" alt="Original_sequence" width="30%">
+  <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_0.gif" alt="Generated_sequence_0" width="30%">
+  <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_1.gif" alt="Generated_sequence_1" width="30%">
+  <br>
+  <em>Centered Caption for Images 2, 3, and 4</em>
+</div>
+
+
+
 ## Installation
 To use this project, follow these steps:
 
