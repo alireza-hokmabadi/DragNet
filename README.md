@@ -64,6 +64,9 @@ Example:
 python phase_a_train.py --data_path /path/to/your/data
 ```
 
+2. **Data Format:**  In this phase, the model utilizes 4-chamber LAX cine CMR images as input. The images are first cropped to a size of 128x128 pixels. Additionally, to manage computational costs, the frames are reduced to the specified frame size (default is 7). You can adjust this size based on your data and requirements. The dataset comprises 4620 samples with corresponding ground truth labels. Among these, 80% are allocated for training, while the remaining 20% are reserved for validation. To enhance speed, we package the data into a 5D tensor with dimensions of 4620x7x1x128x128 and load it into RAM.
+
+**Note:** Due to copyright restrictions, we are unable to share the data. If you intend to use this code, ensure that your data has been preprocessed and cropped according to the specified criteria. Modify the data path as needed and adapt model parameters to suit your dataset.
 
 
 - phase_a_train.py: You can run the code related to train phase using the following command on your local machine:
