@@ -5,7 +5,6 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Citation](#Citation)
-- [Contact](#contact)
 
 ## Description
 Pytorch implementation of DragNet (Deformable Registration and Generative Network).
@@ -103,8 +102,4 @@ If you are interested in our paper or used our codes, please cite it as:
 }
 ```
 
-## contact
-For any comment, please contact Alireza Hokmabadi
-- Email: [a.hokmabadi.ee@gmail.com](mailto:a.hokmabadi.ee@gmail.com)
-
-
+If you have any questions, contact me by this email: [a.hokmabadi.ee@gmail.com](mailto:a.hokmabadi.ee@gmail.com)
