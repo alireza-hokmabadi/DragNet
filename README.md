@@ -12,25 +12,23 @@ Pytorch implementation of DragNet (Deformable Registration and Generative Networ
 This repository is a torch implementation of DragNet based on "DragNet: Learning-based deformable registration for realistic cardiac MR sequence generation from a single frame"
 This paper is publicly available at https://doi.org/10.1016/j.media.2022.102678 or you can download it from [here](https://github.com/alireza-hokmabadi/DragNet/blob/master/data/DragNet_paper.pdf)
 
-
-![alt text](https://github.com/alireza-hokmabadi/DragNet/blob/master/data/model_structure.jpg)
-*Caption: Model structure.*
-
-
-<div align="center">
+<div style="text-align:center; margin-bottom: 20px;">
   <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/model_structure.jpg" alt="Image 1">
   <br>
   <em>Model structure.</em>
 </div>
 
-<div align="center">
+<div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
   <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Original_sequence.gif" alt="Original_sequence" width="30%">
   <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_0.gif" alt="Generated_sequence_0" width="30%">
   <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_1.gif" alt="Generated_sequence_1" width="30%">
-  <br>
-  <em>Centered Caption for Images 2, 3, and 4</em>
 </div>
 
+<div style="text-align:center; margin-bottom: 20px;">
+  <em>Original sequence</em>
+  <em style="margin-left: 50px;">Generated sequence #0</em>
+  <em style="margin-left: 50px;">Generated sequence #1</em>
+</div>
 
 
 ## Installation
