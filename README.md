@@ -28,7 +28,7 @@ The paper is open access at https://doi.org/10.1016/j.media.2022.102678 or you c
 In this figure spatio-temporal registration between consecutive frames in an LAX CMR image sequence consisting of seven frames is shown. The registered image at the first time point is obtained by warping the image at time point 7 to the ED frame. The registered images show overall good compatibility with the reference images. The corresponding colour-coded deformation vector field (DVF) maps showing the direction of displacements are smooth and mostly have positive Jacobian determinants. The reference CMR images were reproduced with permission from UK Biobank©.
 
 
-**Generated sample:**
+**A generated sample:**
 
 <div align="center" style="margin-bottom: 40px;">
   <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_0.gif" alt="Image 3" width="25%">
