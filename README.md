@@ -1,1 +1,1 @@
-# DragNet
+# DragNet (Deformable Registration and Generative Network)
