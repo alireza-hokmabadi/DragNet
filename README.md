@@ -23,10 +23,10 @@ The paper is open access at https://doi.org/10.1016/j.media.2022.102678 or you c
   <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/spatio_temporal_registration.jpg" alt="Image 2" width="80%">
 </div>
 
-**Sample generated results:**
+**Generated sample:**
 
 <div align="center" style="margin-bottom: 40px;">
-  <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_0.gif" alt="Image 3" width="50%">
+  <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_0.gif" alt="Image 3" width="30%">
 </div>
 
 
