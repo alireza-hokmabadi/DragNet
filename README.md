@@ -15,34 +15,20 @@ The paper is open access at https://doi.org/10.1016/j.media.2022.102678 or you c
 
 **Model structure:**
 <div align="center" style="margin-bottom: 40px;">
-  <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/model_structure.jpg" alt="Image 1">
-  <br>
+  <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/model_structure.jpg" alt="Image 1" width="80%">
+</div>
 
+**Spatio-temporal registration:**
+<div align="center" style="margin-bottom: 40px;">
+  <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/spatio_temporal_registration.jpg" alt="Image 2" width="80%">
 </div>
 
 **Sample generated results:**
 
-<div align="center">
-  <table align="center" style="margin-bottom: 40px;">
-    <tr>
-      <td align="center">
-        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Original_sequence.gif" alt="Image 2" width="200px">
-        <br>
-        <em>Original sequence</em>
-      </td>
-      <td align="center">
-        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_0.gif" alt="Image 3" width="200px">
-        <br>
-        <em>Generated sequence #0</em>
-      </td>
-      <td align="center">
-        <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_1.gif" alt="Image 4" width="200px">
-        <br>
-        <em>Generated sequence #1</em>
-      </td>
-    </tr>
-  </table>
+<div align="center" style="margin-bottom: 40px;">
+  <img src="https://github.com/alireza-hokmabadi/DragNet/blob/master/data/Generated_sequence_0.gif" alt="Image 3" width="50%">
 </div>
+
 
 
 ## Installation
