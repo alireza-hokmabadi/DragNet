@@ -98,6 +98,6 @@ if __name__ == "__main__":
     x_prediction = seq_out[0, :, 0].cpu().detach().numpy() * 255.0  # Extract and scale the predicted sequence
     displacement = dis_out[0, :].cpu().detach().numpy()             # Extract the displacement map
 
-    visualization(x_target, x_prediction, displacement, label_title= "Registration (test phase)", label_out= "Prediction", edg= 2)
+    visualization(x_target, x_prediction, displacement, label_title= "Spatio-temporal registration (test phase)", label_out= "Prediction", edg= 2)
 
 print(" Well-done! ".center(50,"="))
