@@ -1,4 +1,6 @@
-[comment]: <> (![GitHub Repo stars](https://img.shields.io/github/stars/alireza-hokmabadi/DragNet))
+<!---
+![GitHub Repo stars](https://img.shields.io/github/stars/alireza-hokmabadi/DragNet))
+-->
 
 # DragNet (Deformable Registration and Generative Network)
 
