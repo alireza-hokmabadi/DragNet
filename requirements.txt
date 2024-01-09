@@ -5,7 +5,7 @@ charset-normalizer==2.1.1
 contourpy==1.1.0
 cycler==0.11.0
 filelock==3.9.0
-fonttools==4.42.0
+fonttools==4.43.0
 google-auth==2.20.0
 google-auth-oauthlib==1.0.0
 grpcio==1.56.0
