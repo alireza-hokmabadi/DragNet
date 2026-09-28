@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments/builds
+.venv/
+venv/
+build/
+dist/
+
+# Experiment outputs
+runs/
+outputs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Local data
+*.pkl
+*.pickle
+*.nii
+*.nii.gz
+*.dcm
+*.npz
+*.npy
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

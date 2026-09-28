@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use the DragNet method, please cite the original paper."
+title: "DragNet: public implementation refresh"
+version: 0.1.0
+authors:
+  - family-names: Hokmabadi
+    given-names: Alireza
+repository-code: "https://github.com/alireza-hokmabadi/DragNet"
+preferred-citation:
+  type: article
+  title: "DragNet: Learning-based deformable registration for realistic cardiac MR sequence generation from a single frame"
+  authors:
+    - family-names: Zakeri
+      given-names: Arezoo
+    - family-names: Hokmabadi
+      given-names: Alireza
+    - family-names: Bi
+      given-names: Ning
+    - family-names: Wijesinghe
+      given-names: Isuru
+    - family-names: Nix
+      given-names: Michael G.
+    - family-names: Petersen
+      given-names: Steffen E.
+    - family-names: Frangi
+      given-names: Alejandro F.
+    - family-names: Taylor
+      given-names: Zeike A.
+    - family-names: Gooya
+      given-names: Ali
+  journal: "Medical Image Analysis"
+  volume: "83"
+  year: 2023
+  start: "102678"
+  doi: "10.1016/j.media.2022.102678"
