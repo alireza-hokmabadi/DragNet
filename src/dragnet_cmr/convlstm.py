@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Sequence
+from typing import cast
 
 import torch
 from torch import nn
@@ -92,9 +93,12 @@ class ConvLSTM(nn.Module):
             )
         self.cells = nn.ModuleList(cells)
 
+    def _cell(self, index: int) -> ConvLSTMCell:
+        return cast(ConvLSTMCell, self.cells[index])
+
     @property
     def output_dim(self) -> int:
-        return self.cells[-1].hidden_dim
+        return self._cell(-1).hidden_dim
 
     def init_hidden(
         self,
@@ -105,13 +109,13 @@ class ConvLSTM(nn.Module):
         dtype: torch.dtype,
     ) -> list[tuple[torch.Tensor, torch.Tensor]]:
         return [
-            cell.init_hidden(
+            self._cell(index).init_hidden(
                 batch_size,
                 spatial_size,
                 device=device,
                 dtype=dtype,
             )
-            for cell in self.cells
+            for index in range(len(self.cells))
         ]
 
     def forward(
@@ -124,7 +128,8 @@ class ConvLSTM(nn.Module):
 
         new_hidden_state: list[tuple[torch.Tensor, torch.Tensor]] = []
         current = input_tensor
-        for cell, state in zip(self.cells, hidden_state, strict=True):
+        for index, state in enumerate(hidden_state):
+            cell = self._cell(index)
             h_next, c_next = cell(current, state)
             new_hidden_state.append((h_next, c_next))
             current = h_next
