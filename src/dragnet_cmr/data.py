@@ -8,7 +8,7 @@ import torch
 from scipy import ndimage
 from torch.utils.data import Dataset
 
-BlurMode = Literal["legacy", "spatial"]
+BlurMode = Literal["dragnet", "spatial"]
 
 
 def _validate_array(array: np.ndarray) -> np.ndarray:
@@ -29,7 +29,7 @@ def _validate_array(array: np.ndarray) -> np.ndarray:
 
 
 def load_sequences(path: str | Path, *, key: str = "sequences") -> np.ndarray:
-    """Load cine sequences from a safe NumPy ``.npz`` or ``.npy`` file."""
+    """Load cine sequences from a NumPy ``.npz`` or ``.npy`` file."""
     target = Path(path)
     suffix = target.suffix.lower()
     if suffix == ".npy":
@@ -40,10 +40,7 @@ def load_sequences(path: str | Path, *, key: str = "sequences") -> np.ndarray:
                 raise KeyError(f"NPZ file does not contain key {key!r}.")
             array = archive[key]
     else:
-        raise ValueError(
-            "Only .npy and .npz inputs are supported; "
-            "pickle inputs are intentionally rejected."
-        )
+        raise ValueError("Only .npy and .npz inputs are supported.")
     return _validate_array(np.asarray(array))
 
 
@@ -61,19 +58,18 @@ def normalize_sequence(sequence: np.ndarray) -> np.ndarray:
     return np.clip(sequence, 0.0, 1.0)
 
 
-def blur_sequence(sequence: np.ndarray, sigma: float, *, mode: BlurMode = "legacy") -> np.ndarray:
+def blur_sequence(sequence: np.ndarray, sigma: float, *, mode: BlurMode = "dragnet") -> np.ndarray:
     if sigma < 0:
         raise ValueError("sigma must be non-negative.")
     if sigma == 0:
         return sequence.astype(np.float32, copy=True)
-    if mode == "legacy":
-        # Historical code passed a scalar sigma to scipy.ndimage.gaussian_filter,
-        # therefore applying the small blur across temporal and spatial axes.
+    if mode == "dragnet":
+        # DragNet preprocessing applies the sigma across temporal and spatial axes.
         sigma_spec: float | tuple[float, float, float] = sigma
     elif mode == "spatial":
         sigma_spec = (0.0, sigma, sigma)
     else:
-        raise ValueError("mode must be 'legacy' or 'spatial'.")
+        raise ValueError("mode must be 'dragnet' or 'spatial'.")
     return ndimage.gaussian_filter(sequence.astype(np.float32), sigma_spec, mode="constant")
 
 
@@ -83,7 +79,7 @@ class CineSequenceDataset(Dataset[torch.Tensor]):
         sequences: np.ndarray,
         *,
         sigma_blur: float = 0.2,
-        blur_mode: BlurMode = "legacy",
+        blur_mode: BlurMode = "dragnet",
     ) -> None:
         self.sequences = _validate_array(np.asarray(sequences))
         self.sigma_blur = sigma_blur

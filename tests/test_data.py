@@ -21,7 +21,7 @@ def test_normalize_uint8():
 
 def test_blur_modes_keep_shape():
     sequence = np.zeros((7, 128, 128), dtype=np.float32)
-    assert blur_sequence(sequence, 0.2, mode="legacy").shape == sequence.shape
+    assert blur_sequence(sequence, 0.2, mode="dragnet").shape == sequence.shape
     assert blur_sequence(sequence, 0.2, mode="spatial").shape == sequence.shape
 
 

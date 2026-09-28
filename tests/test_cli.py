@@ -26,4 +26,4 @@ def test_smoke_cli(capsys):
     assert code == 0
     output = capsys.readouterr().out
     assert "1,218,253" in output
-    assert "not a performance demo" in output
+    assert "Smoke test completed." in output

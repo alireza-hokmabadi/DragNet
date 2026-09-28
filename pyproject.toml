@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "dragnet-cmr"
 version = "0.1.0"
-description = "Public, data-safe implementation refresh of DragNet for probabilistic cardiac CMR registration and sequence generation."
+description = "PyTorch implementation of DragNet for probabilistic cardiac CMR registration and sequence generation."
 readme = "README.md"
 requires-python = ">=3.10"
 maintainers = [{name = "Alireza Hokmabadi"}]

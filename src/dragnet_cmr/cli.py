@@ -19,12 +19,12 @@ from .visualization import save_registration_figure, save_sequence_preview
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="dragnet-cmr",
-        description="Public, data-safe implementation refresh of DragNet.",
+        description="DragNet for cine CMR registration and sequence generation.",
     )
     parser.add_argument("--version", action="version", version=__version__)
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    synthetic = subparsers.add_parser("synthetic", help="Create a fully synthetic phantom dataset.")
+    synthetic = subparsers.add_parser("synthetic", help="Create a synthetic dataset for testing.")
     synthetic.add_argument("output", type=Path)
     synthetic.add_argument("--samples", type=int, default=8)
     synthetic.add_argument("--frames", type=int, default=7)
@@ -35,13 +35,13 @@ def _build_parser() -> argparse.ArgumentParser:
         "smoke",
         help="Run an untrained architecture smoke test on synthetic data.",
     )
-    smoke.add_argument("--sampling", choices=("legacy", "cholesky"), default="legacy")
+    smoke.add_argument("--sampling", choices=("dragnet", "cholesky"), default="dragnet")
     smoke.add_argument("--device", default="auto")
     smoke.add_argument("--seed", type=int, default=1234)
 
     train_parser = subparsers.add_parser(
         "train",
-        help="Train on an authorised user-supplied NPZ/NPY dataset.",
+        help="Train DragNet on an NPZ/NPY sequence dataset.",
     )
     train_parser.add_argument("data", type=Path)
     train_parser.add_argument("--output-dir", type=Path, default=Path("checkpoints"))
@@ -49,10 +49,10 @@ def _build_parser() -> argparse.ArgumentParser:
     train_parser.add_argument("--batch-size", type=int, default=10)
     train_parser.add_argument("--learning-rate", type=float, default=1e-3)
     train_parser.add_argument("--sigma-blur", type=float, default=0.2)
-    train_parser.add_argument("--blur-mode", choices=("legacy", "spatial"), default="legacy")
+    train_parser.add_argument("--blur-mode", choices=("dragnet", "spatial"), default="dragnet")
     train_parser.add_argument("--validation-fraction", type=float, default=0.2)
     train_parser.add_argument("--validation-count", type=int, default=None)
-    train_parser.add_argument("--sampling", choices=("legacy", "cholesky"), default="legacy")
+    train_parser.add_argument("--sampling", choices=("dragnet", "cholesky"), default="dragnet")
     train_parser.add_argument("--device", default="auto")
     train_parser.add_argument("--seed", type=int, default=1234)
 
@@ -66,8 +66,8 @@ def _build_parser() -> argparse.ArgumentParser:
     register.add_argument("--figure", type=Path, default=None)
     register.add_argument("--index", type=int, default=0)
     register.add_argument("--sigma-blur", type=float, default=0.2)
-    register.add_argument("--blur-mode", choices=("legacy", "spatial"), default="legacy")
-    register.add_argument("--sampling", choices=("legacy", "cholesky"), default="legacy")
+    register.add_argument("--blur-mode", choices=("dragnet", "spatial"), default="dragnet")
+    register.add_argument("--sampling", choices=("dragnet", "cholesky"), default="dragnet")
     register.add_argument("--device", default="auto")
     register.add_argument("--seed", type=int, default=1234)
 
@@ -82,8 +82,8 @@ def _build_parser() -> argparse.ArgumentParser:
     generate.add_argument("--index", type=int, default=0)
     generate.add_argument("--frames", type=int, default=7)
     generate.add_argument("--sigma-blur", type=float, default=0.2)
-    generate.add_argument("--blur-mode", choices=("legacy", "spatial"), default="legacy")
-    generate.add_argument("--sampling", choices=("legacy", "cholesky"), default="legacy")
+    generate.add_argument("--blur-mode", choices=("dragnet", "spatial"), default="dragnet")
+    generate.add_argument("--sampling", choices=("dragnet", "cholesky"), default="dragnet")
     generate.add_argument("--device", default="auto")
     generate.add_argument("--seed", type=int, default=1234)
     return parser
@@ -133,10 +133,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(f"parameters: {model.parameter_count():,}")
         print(f"registered shape: {tuple(output.registered.shape)}")
         print(f"displacement shape: {tuple(output.displacement.shape)}")
-        print(
-            "This is an architecture smoke test with untrained weights; "
-            "it is not a performance demo."
-        )
+        print("Smoke test completed.")
         return 0
 
     if args.command == "train":

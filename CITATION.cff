@@ -1,8 +1,10 @@
 cff-version: 1.2.0
-message: "If you use the DragNet method, please cite the original paper."
-title: "DragNet: public implementation refresh"
+message: "If you use DragNet, please cite the original paper."
+title: "DragNet"
 version: 0.1.0
 authors:
+  - family-names: Zakeri
+    given-names: Arezoo
   - family-names: Hokmabadi
     given-names: Alireza
 repository-code: "https://github.com/alireza-hokmabadi/DragNet"

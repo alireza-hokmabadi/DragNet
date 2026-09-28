@@ -1,4 +1,4 @@
-"""Public, data-safe implementation refresh of DragNet."""
+"""DragNet for probabilistic cardiac CMR registration and sequence generation."""
 
 from .model import DragNet, DragNetForward, DragNetGeneration
 from .version import __version__

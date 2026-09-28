@@ -9,7 +9,7 @@ from .convlstm import ConvLSTM
 from .losses import LossTerms, dragnet_loss_terms
 from .spatial import warp_image_2d
 
-DisplacementSampling = Literal["legacy", "cholesky"]
+DisplacementSampling = Literal["dragnet", "cholesky"]
 
 
 class DragNetForward(NamedTuple):
@@ -42,9 +42,7 @@ def _conv_up(in_channels: int, out_channels: int) -> nn.Sequential:
 class DragNet(nn.Module):
     """Deformable Registration and Generative Network from Zakeri et al. (2023).
 
-    The convolutional dimensions are intentionally kept compatible with the published
-    128 x 128 implementation. Engineering around the network has been modernised, but
-    the core module layout and loss weights mirror the historical public code.
+    The architecture follows the 128 x 128 DragNet implementation.
     """
 
     image_size = (128, 128)
@@ -54,14 +52,14 @@ class DragNet(nn.Module):
     def __init__(
         self,
         *,
-        displacement_sampling: DisplacementSampling = "legacy",
+        displacement_sampling: DisplacementSampling = "dragnet",
         latent_kl_weight: float = 2e-4,
         smoothness_weight: float = 0.03,
         displacement_kl_weight: float = 1e-4,
     ) -> None:
         super().__init__()
-        if displacement_sampling not in {"legacy", "cholesky"}:
-            raise ValueError("displacement_sampling must be 'legacy' or 'cholesky'.")
+        if displacement_sampling not in {"dragnet", "cholesky"}:
+            raise ValueError("displacement_sampling must be 'dragnet' or 'cholesky'.")
         self.displacement_sampling = displacement_sampling
         self.latent_kl_weight = latent_kl_weight
         self.smoothness_weight = smoothness_weight
@@ -172,8 +170,8 @@ class DragNet(nn.Module):
     ) -> torch.Tensor:
         mu_matrix = mu.permute(0, 2, 3, 1).unsqueeze(-1)
         epsilon = torch.randn_like(mu_matrix)
-        if self.displacement_sampling == "legacy":
-            # Preserves the historical public implementation exactly.
+        if self.displacement_sampling == "dragnet":
+            # Sampling used by the DragNet implementation.
             transform = 0.5 * covariance
         else:
             identity = torch.eye(2, device=covariance.device, dtype=covariance.dtype)
@@ -242,7 +240,7 @@ class DragNet(nn.Module):
             d_cov = self.displacement_covariance(d_logvar, d_log_v)
             d_value = self.sample_displacement(d_mu, d_cov)
 
-            # The historical implementation stored D as (row, column) and swapped
+            # DragNet stores D as (row, column) and swaps
             # channels before the STN. warp_image_2d expects (x, y), so preserve that.
             prediction = warp_image_2d(past, d_value[:, [1, 0]])
             h_recurrent, hidden_state = self._update_recurrent(

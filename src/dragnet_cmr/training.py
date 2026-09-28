@@ -19,11 +19,11 @@ class TrainingConfig:
     batch_size: int = 10
     learning_rate: float = 1e-3
     sigma_blur: float = 0.2
-    blur_mode: BlurMode = "legacy"
+    blur_mode: BlurMode = "dragnet"
     validation_fraction: float = 0.2
     validation_count: int | None = None
     seed: int = 1234
-    displacement_sampling: DisplacementSampling = "legacy"
+    displacement_sampling: DisplacementSampling = "dragnet"
 
 
 def resolve_device(requested: str = "auto") -> torch.device:

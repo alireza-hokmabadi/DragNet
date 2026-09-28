@@ -1,15 +1,14 @@
 # Changelog
 
-## 0.1.0 — public implementation refresh
+## 0.1.0
 
-- rebuilt the repository from a clean history;
-- removed participant-derived examples, figures, paper PDF and model weights;
-- replaced public examples with analytic synthetic phantoms;
-- converted the code into an installable `dragnet-cmr` package;
-- modernised PyTorch usage and device handling;
-- replaced pickle data I/O with NumPy NPZ/NPY;
-- fixed checkpoint epoch naming and out-of-main saving;
-- added deterministic training utilities;
-- added registration/generation CLI commands;
-- made historical displacement sampling and blur behaviour explicit;
-- added tests, coverage, type/lint configuration and CI.
+Initial packaged release of DragNet.
+
+- PyTorch implementation of the DragNet architecture;
+- training, registration and sequence-generation workflows;
+- command-line and Python interfaces;
+- NumPy NPZ/NPY data loading;
+- reproducible train/validation splitting and checkpointing;
+- displacement and Jacobian utilities;
+- automated tests, static type checking and linting;
+- continuous integration on Python 3.10–3.13.

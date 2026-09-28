@@ -3,7 +3,7 @@ import torch
 from dragnet_cmr.model import DragNet
 
 
-def test_parameter_count_matches_historical_architecture():
+def test_parameter_count_matches_dragnet_architecture():
     model = DragNet()
     assert model.parameter_count() == 1_218_253
 
